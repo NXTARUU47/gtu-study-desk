@@ -1,16 +1,16 @@
 import React from "react";
 
-function About() {
+function About({ darkMode }) {
   return (
     <section
       id="about"
-      className="py-20 sm:py-24 px-4 sm:px-6 lg:px-10 bg-white"
+      className={`py-20 sm:py-24 px-4 sm:px-6 lg:px-10 transition-colors duration-300 ${
+        darkMode ? "bg-slate-950 text-white" : "bg-white text-slate-900"
+      }`}
     >
       <div className="max-w-[1200px] mx-auto">
         {/* Section Heading */}
         <div className="text-center max-w-2xl mx-auto">
-          
-
           <h2 className=" text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-800">
             Everything You Need to
             <span className="block bg-gradient-to-r from-indigo-500 to-teal-500 bg-clip-text text-transparent">

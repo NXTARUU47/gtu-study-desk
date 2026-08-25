@@ -1,22 +1,20 @@
-import React from 'react'
-import Header from './Header'
-import Hero from './Hero'
-import About from './About'
-import StudyMaterials from './StudyMaterials'
-import Semester3 from '../Semesters/Semester3'
-import Footer from './Footer'
-import Contact from './Contact'
+import React from "react";
+import Hero from "./Hero";
+import About from "./About";
+import StudyMaterials from "./StudyMaterials";
+import Contact from "./Contact";
+import AIHelp from "./AIHelp";
 
-function Home() {
+function Home({ darkMode }) {
   return (
-    <div>
-      <Header/>
-      <Hero/>
-      <About/>
-      <StudyMaterials/>
-      <Contact/>
+    <div className="min-h-screen transition-colors duration-300">
+      <Hero darkMode={darkMode} />
+      <About darkMode={darkMode} />
+      <StudyMaterials darkMode={darkMode} />
+      <AIHelp/>
+      <Contact darkMode={darkMode} />
     </div>
-  )
+  );
 }
 
-export default Home
+export default Home;

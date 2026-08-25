@@ -10,7 +10,7 @@ import {
   FaArrowRight,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
-function StudyMaterials() {
+function StudyMaterials({darkMode}) {
   const semesters = [
     {
       id: 1,

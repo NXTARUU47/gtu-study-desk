@@ -11,56 +11,73 @@ function Footer() {
     <div className="w-full mt-16">
       {/* 🌊 Animated Wave Container (Positioned right above footer) */}
       <div className="w-full h-16 sm:h-20 md:h-24 overflow-hidden leading-none pointer-events-none">
-  <svg
-    viewBox="0 0 1440 160"
-    preserveAspectRatio="none"
-    className="w-full h-full block"
-    xmlns="http://www.w3.org/2000/svg"
-    aria-hidden="true"
+        <svg
+  viewBox="0 0 1440 240"
+  preserveAspectRatio="none"
+  class="w-full h-full block"
+  xmlns="http://www.w3.org/2000/svg"
+  aria-hidden="true"
+>
+  <defs>
+    <linearGradient id="wave-dark-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#111827" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#111827" stop-opacity="1" />
+    </linearGradient>
+  </defs>
+
+  <path
+    fill="#111827"
+    fill-opacity="0.3"
+    d="M0,96 C280,160 480,40 720,100 C960,160 1200,60 1440,110 L1440,240 L0,240 Z"
   >
-    <path
-      fill="#111827"
-      d="M0,80
-         C180,145 360,145 540,80
-         C720,15 900,15 1080,80
-         C1260,145 1350,125 1440,80
-         L1440,160
-         L0,160
-         Z"
-    >
-      <animate
-        attributeName="d"
-        dur="8s"
-        repeatCount="indefinite"
-        values="
-          M0,80
-          C180,145 360,145 540,80
-          C720,15 900,15 1080,80
-          C1260,145 1350,125 1440,80
-          L1440,160
-          L0,160
-          Z;
+    <animate
+      attributeName="d"
+      dur="12s"
+      repeatCount="indefinite"
+      values="
+        M0,96 C280,160 480,40 720,100 C960,160 1200,60 1440,110 L1440,240 L0,240 Z;
+        M0,120 C320,40 520,160 760,90 C1000,20 1180,140 1440,80 L1440,240 L0,240 Z;
+        M0,96 C280,160 480,40 720,100 C960,160 1200,60 1440,110 L1440,240 L0,240 Z
+      "
+    />
+  </path>
 
-          M0,90
-          C180,30 360,30 540,90
-          C720,150 900,150 1080,90
-          C1260,30 1350,45 1440,90
-          L1440,160
-          L0,160
-          Z;
+  {/* <!-- Midground Layer --> */}
+  <path
+    fill="#111827"
+    fill-opacity="0.55"
+    d="M0,130 C240,60 480,160 720,110 C960,60 1200,150 1440,90 L1440,240 L0,240 Z"
+  >
+    <animate
+      attributeName="d"
+      dur="8s"
+      repeatCount="indefinite"
+      values="
+        M0,130 C240,60 480,160 720,110 C960,60 1200,150 1440,90 L1440,240 L0,240 Z;
+        M0,80 C260,150 500,70 740,130 C980,190 1220,80 1440,120 L1440,240 L0,240 Z;
+        M0,130 C240,60 480,160 720,110 C960,60 1200,150 1440,90 L1440,240 L0,240 Z
+      "
+    />
+  </path>
 
-          M0,80
-          C180,145 360,145 540,80
-          C720,15 900,15 1080,80
-          C1260,145 1350,125 1440,80
-          L1440,160
-          L0,160
-          Z
-        "
-      />
-    </path>
-  </svg>
-</div>
+  {/* <!-- Foreground Primary Wave --> */}
+  <path
+    fill="url(#wave-dark-grad)"
+    d="M0,70 C360,140 720,30 1080,100 C1260,135 1380,85 1440,60 L1440,240 L0,240 Z"
+  >
+    <animate
+      attributeName="d"
+      dur="5s"
+      repeatCount="indefinite"
+      values="
+        M0,70 C360,140 720,30 1080,100 C1260,135 1380,85 1440,60 L1440,240 L0,240 Z;
+        M0,100 C320,30 680,150 1040,70 C1220,30 1360,110 1440,90 L1440,240 L0,240 Z;
+        M0,70 C360,140 720,30 1080,100 C1260,135 1380,85 1440,60 L1440,240 L0,240 Z
+      "
+    />
+  </path>
+</svg>
+      </div>
 
       {/* 🖤 Main Footer */}
       <footer className="bg-gray-900 text-white">
@@ -70,7 +87,9 @@ function Footer() {
             <div className="col-span-2 md:col-span-1">
               <div className="flex items-center justify-center sm:justify-start gap-2 mb-3">
                 <FaGraduationCap className="text-2xl sm:text-3xl text-blue-500" />
-                <h2 className="text-xl sm:text-2xl font-bold">GTU Study Desk</h2>
+                <h2 className="text-xl sm:text-2xl font-bold">
+                  GTU Study Desk
+                </h2>
               </div>
 
               <p className="text-gray-400 text-xs sm:text-sm leading-6">

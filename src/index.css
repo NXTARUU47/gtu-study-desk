@@ -10,8 +10,16 @@
   --color-text: #334155;
   --color-muted: #64748b;
 }
+
 html {
   scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  transition:
+    background-color 300ms ease,
+    color 300ms ease;
 }
 
 section {
